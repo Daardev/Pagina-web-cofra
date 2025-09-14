@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+
+:root{
+  --color-primary: #F2F2F2;
+  --color-secondary: #0D0D0D;
+  --color-button: #95BF6B;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: 'Roboto', sans-serif; 
+  min-height: 100vh;
+}
+.header{
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.logo{
+  position: absolute;
+  left: 0;
+}
+.logo img{
+  width: 100px;
+}
+ul{
+  list-style: none;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.menu a{
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+.menu a:hover{
+  color: var(--color-button);
+  transition: 0.3s;
+}
+/*main*/
+.main-container{
+  padding: 100px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.section-intro{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+.div-intro{
+  flex: 1;
+}
+.div-img{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.div-img img{
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+.hr-intro{
+  width: 30px;
+  border: none;
+  height: 3px;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--color-button);
+}
+.div-intro h1{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.btn-intro{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  margin: 40px 0px;
+  padding: 10px 15px;
+  font-size: 0.8em;
+  border: 3px solid var(--color-secondary);
+  background: transparent;
+  cursor: pointer;
+}
+.btn-intro:hover{
+  color: var(--color-button);
+  transition: 0.3s;
+  border: 3px solid var(--color-button);
+}
+
+/* Media Queries - Diseño Responsivo */
+
+/* Tablets - 768px a 1024px */
+@media (max-width: 1024px) {
+  .main-container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  
+  .section-intro {
+    gap: 30px;
+  }
+  
+  .div-intro h1 {
+    font-size: 3em;
+  }
+  .div-intro p{
+    font-size: 0.8em;
+  }
+  
+  .nav-header {
+    font-size: 1.1em;
+    gap: 20px;
+    padding: 20px;
+  }
+  .btn-intro{
+    font-size: 0.8em;
+  }
+}
+
+/* Tablets pequeñas - 768px */
+@media (max-width: 768px) {
+  .section-intro {
+    flex-direction: row;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .div-intro h1 {
+    font-size: 50px;
+  }
+  
+  .main-container {
+    padding: 0 20px;
+  }
+  
+  .nav-header {
+    font-size: 1em;
+    gap: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .div-img img {
+    max-height: 50vh;
+  }
+}
+
+/* Móviles - 480px */
+@media (max-width: 480px) {
+  .div-intro h1 {
+    font-size: 36px;
+  }
+  
+  .main-container {
+    padding: 0 15px;
+    min-height: auto;
+  }
+  
+  .section-intro {
+    gap: 30px;
+    padding: 20px 0;
+  }
+  
+  .nav-header {
+    font-size: 0.9em;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .btn-intro {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 30px 0;
+  }
+  
+  .div-img img {
+    max-height: 40vh;
+  }
+  
+  .hr-intro {
+    width: 25px;
+    height: 2px;
+  }
+}
+
+/* Móviles muy pequeños - 320px */
+@media (max-width: 320px) {
+  .div-intro h1 {
+    font-size: 28px;
+  }
+  
+  .main-container {
+    padding: 0 10px;
+  }
+  
+  .nav-header {
+    font-size: 0.8em;
+    gap: 8px;
+    padding: 8px;
+  }
+  
+  .btn-intro {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .div-img img {
+    max-height: 35vh;
+  }
+}
