@@ -226,16 +226,16 @@ ul {
 }
 /* Fondos específicos por marca (puedes cambiar cada ruta luego) */
 .gallery .tile.araucania {
-  background-image: url('../img/2149937913.webp');
+  background-image: url('/assets/img/2149937913.webp');
 }
 .gallery .tile.kurruf {
   background-image: url('');
 }
 .gallery .tile.ingecrea {
-  background-image: url('../img/2149511980.jpg');
+  background-image: url('/assets/img/2149511980.jpg');
 }
 .gallery .tile.service {
-  background-image: url('img/service.webp');
+  background-image: url('/assets/img/service.webp');
 }
 .gallery .tile img {
   display: block;
