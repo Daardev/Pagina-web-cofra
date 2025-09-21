@@ -231,6 +231,30 @@ ul {
 .gallery .w-2 { flex-grow: 2; }
 .gallery .w-3 { flex-grow: 3; }
 
+/* nosotros */
+.nosotros {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+}
+.nosotros-container{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.nosotros-descripcion{
+  font-size: 1.3em;
+}
+.mission-container{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
 /* Responsive: bajar altura de fila en pantallas pequeñas */
 @media (max-width: 1024px) {
   .gallery .tile img { height: 160px; }
