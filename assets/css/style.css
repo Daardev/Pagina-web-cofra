@@ -31,6 +31,7 @@ body {
   margin: 0 auto;
   padding: 20px 50px;
   background-color: var(--color-primary);
+  z-index: 999;
 }
 .nav-header {
   display: flex;
@@ -72,6 +73,7 @@ ul {
 .section-intro {
   display: flex;
   align-items: center;
+  min-height: 100vh;
   height: 90vh;
 }
 .div-intro {
@@ -136,6 +138,12 @@ ul {
 .info-container {
   margin: 0 auto;
   padding-right: 20px;
+}
+/* Hace que el bloque de texto se mantenga visible al hacer scroll */
+.info-1 {
+  position: sticky;
+  top: 120px; /* compensación por el header fijo */
+  z-index: 10;
 }
 .info-1 h3 {
   font-size: 2em;
@@ -203,7 +211,6 @@ ul {
 }
 .gallery .row {
   display: flex;
-  align-items: stretch;
   gap: 12px;
 }
 .gallery .tile {
@@ -217,7 +224,7 @@ ul {
   display: block;
   width: 100%;
   height: 180px; /* altura uniforme de fila */
-  object-fit: cover; /* recorta para llenar el ancho del tile */
+  object-fit: contain; /* recorta para llenar el ancho del tile */
 }
 /* Utilidades para variar el ancho relativo de cada tile (similar a un justified layout) */
 .gallery .w-1 { flex-grow: 1; }
