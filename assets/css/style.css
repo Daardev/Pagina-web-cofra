@@ -24,6 +24,7 @@ body {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden; /* evita scroll horizontal por secciones full-bleed */
 }
 .header {
   display: flex;
@@ -196,12 +197,17 @@ ul {
 }
 
 /* Galería justificada (dos filas por sección) */
-.portfolio .gallery {
+.portfolio.gallery {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  margin: 30px 0 60px;
+  max-width: 100vw;
+}
+/* Hacer que la sección portfolio ocupe el 100% del ancho de la pantalla (full-bleed) */
+.portfolio.gallery {
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
 }
 .portfolio h3 {
   font-family: "Orbitron",sans-serif;
@@ -211,25 +217,32 @@ ul {
 }
 .gallery .row {
   display: flex;
-  gap: 12px;
 }
+/* Fondo por defecto para cada figure de la galería */
 .gallery .tile {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #f2f2f2;
-  flex: 1 1 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Fondos específicos por marca (puedes cambiar cada ruta luego) */
+.gallery .tile.araucania {
+  background-image: url('../img/2149937913.webp');
+}
+.gallery .tile.kurruf {
+  background-image: url('');
+}
+.gallery .tile.ingecrea {
+  background-image: url('../img/2149511980.jpg');
+}
+.gallery .tile.service {
+  background-image: url('img/service.webp');
 }
 .gallery .tile img {
   display: block;
   width: 100%;
-  height: 180px; /* altura uniforme de fila */
+  height: 400px; /* altura uniforme de fila */
   object-fit: contain; /* recorta para llenar el ancho del tile */
 }
-/* Utilidades para variar el ancho relativo de cada tile (similar a un justified layout) */
-.gallery .w-1 { flex-grow: 1; }
-.gallery .w-2 { flex-grow: 2; }
-.gallery .w-3 { flex-grow: 3; }
 
 /* nosotros */
 .nosotros {
